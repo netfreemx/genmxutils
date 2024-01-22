@@ -1,0 +1,4 @@
+
+rootProject.name = "Notification Utils"
+include ':app'
+include ':generadorutils'
