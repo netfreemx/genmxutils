@@ -95,12 +95,18 @@ public class NetFreeMXGen {
         editor.putString(AppConstants.CUSTOM_SNI, sni);
 
         if (tokenMode) {
-            String user = tokenModeActive() ? getTokenId() : getUsername();
-            String pass = tokenModeActive() ? tokenPassword : getPassword();
-
-            editor.putString(AppConstants.USUARIO_KEY, user);
-            editor.putString(AppConstants.SENHA_KEY, pass);
+            Log.i(TAG, "Token/User Mode Enabled");
+            if (tokenModeActive()) {
+                Log.i(TAG, "Mode User Actived");
+                editor.putString(AppConstants.USUARIO_KEY, getUsername());
+                editor.putString(AppConstants.SENHA_KEY, getPassword());
+            } else {
+                Log.i(TAG, "Mode User Disabled");
+                editor.putString(AppConstants.USUARIO_KEY, getTokenId());
+                editor.putString(AppConstants.SENHA_KEY, tokenPassword);
+            }
         } else {
+            Log.i(TAG, "Token/User Mode Disabled");
             editor.putString(AppConstants.USUARIO_KEY, username);
             editor.putString(AppConstants.SENHA_KEY, password);
         }
