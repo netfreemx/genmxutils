@@ -14,7 +14,7 @@ public interface AppConstants {
             UDP_OBFS = "udpobfs",
             UDP_DOWN = "udpdown",
             UDP_UP = "udpup",
-            UDP_BUFFER = "udpbuffer",
+            UDP_PORT = "udpport",
             V2RAY_JSON = "v2rayjson";
 
     String SERVIDOR_KEY = "sshServer",

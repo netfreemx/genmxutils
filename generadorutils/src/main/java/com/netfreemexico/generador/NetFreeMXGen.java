@@ -169,7 +169,7 @@ public class NetFreeMXGen {
         String udpServer = server.getString("UdpServer");
         String udpAuth = server.getString("UdpAuth");
         String udpObfs = server.getString("UdpObfs");
-        String udpBuffer = server.getString("UdpBuffer");
+        String udpPort = server.getString("UdpPort");
         String udpUp = server.getString("UdpUp");
         String udpDown = server.getString("UdpDown");
 
@@ -179,7 +179,7 @@ public class NetFreeMXGen {
         editor.putString(AppConstants.UDP_OBFS, udpObfs);
 
 
-        editor.putString(AppConstants.UDP_BUFFER, udpBuffer);
+        editor.putString(AppConstants.UDP_PORT, udpPort);
         editor.putString(AppConstants.UDP_UP, udpUp);
 
         editor.putString(AppConstants.UDP_DOWN, udpDown);
